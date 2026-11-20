@@ -19,6 +19,14 @@
     volumes:
       - pb_data:/pb/pb_data
 
+  ollama:
+    image: ollama/ollama:0.40.12
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+
 volumes:
   n8n_data:
   pb_data:
+  ollama_data:
